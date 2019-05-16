@@ -1,0 +1,14 @@
+#!/bin/bash
+
+templatePath="~/.latex/templates"
+templateName=$1
+
+if [ $templateName ]; then #Checks if a Template Name was provided
+	if [ -d $templatePath"/"$templateName ]; then #Checks if Template exists in path
+		cp $templatePath"/"$templateName"/"* . #copies Template into current folder
+	else
+		echo "Template " $templateName " not found."
+	fi		
+else
+	echo "Usage: createtex {template}"
+fi
