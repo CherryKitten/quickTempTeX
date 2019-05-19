@@ -1,6 +1,6 @@
 #!/bin/bash
 
-templatePath="~/.latex/templates"
+templatePath=$HOME"/.latex/templates"
 templateName=$1
 
 if [ $templateName ]; then #Checks if a Template Name was provided
